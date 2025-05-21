@@ -3,8 +3,12 @@
 import 'package:equatable/equatable.dart';
 
 abstract class ImagePickerEvent extends Equatable {
-  Equatable();
+  const ImagePickerEvent();
 
   @override
   List<Object> get props => [];
 }
+
+class CameraCapture extends ImagePickerEvent {}
+
+class GalleryCapture extends ImagePickerEvent {}
