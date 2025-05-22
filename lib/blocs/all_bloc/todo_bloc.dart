@@ -25,5 +25,4 @@ class TodoBloc extends Bloc<TodoEvent, TodoState> {
     emit(state.copyWith(todoList: List.from(list)));
   }
 
-
 }
