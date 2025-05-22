@@ -7,7 +7,9 @@ abstract class SwitchEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class EnableOrDisableNotification extends SwitchEvent {}
+class EnableOrDisableNotification extends SwitchEvent {
+
+}
 
 class SliderEvent extends SwitchEvent {
   double slider;

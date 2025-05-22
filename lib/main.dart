@@ -1,7 +1,9 @@
 import 'package:bloc_playlist/Utils/image_picker_utils.dart';
 import 'package:bloc_playlist/blocs/all_bloc/image_picker_bloc.dart';
+import 'package:bloc_playlist/blocs/all_bloc/todo_bloc.dart';
 import 'package:bloc_playlist/home_view.dart';
 import 'package:bloc_playlist/swtich_example/example_two.dart';
+import 'package:bloc_playlist/todo_list_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -30,8 +32,11 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (_) => ImagePickerBlock(ImagePickerUtils()),
         ),
+        BlocProvider(
+          create: (_) => TodoBloc(),
+        ),
       ],
-      child: MaterialApp(home: ImagePickerView(), debugShowCheckedModeBanner: false),
+      child: MaterialApp(home: TodoListView(), debugShowCheckedModeBanner: false),
     );
   }
 }
